@@ -182,17 +182,18 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "this" is referring to the "joe" instance of the Student constructor.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// "this" in the scopeArrow() method references a Window object.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Regular functions bind the object calling the method as the method owner and reference the object
+// The scope arrow functions are defined in determines how they determine "this", since the arrow function is defined within the context of the global Window object, it references Window object as "this".
